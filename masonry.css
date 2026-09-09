@@ -1,0 +1,142 @@
+/* ═══════════════════════ MASONRY GRID ═══════════════════════ */
+.list {
+  position: relative;
+  width: 100%;
+  /* Height is dynamically set by JS to prevent collapse of absolute children */
+  height: auto;
+  min-height: 200px;
+  transition: height 0.4s var(--ease);
+}
+
+.item-wrapper {
+  position: absolute;
+  will-change: transform, opacity;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  padding: 8px; /* Balanced spacing between grid items */
+  cursor: none; /* Hide default cursor since website has a custom cursor */
+  top: 0;
+  left: 0;
+  transform-origin: center center;
+}
+
+.item-wrapper > .item-img {
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0px 10px 40px -15px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+  transform: translate3d(0, 0, 0);
+  backface-visibility: hidden;
+  will-change: transform;
+}
+
+/* ═══════════════════════ HOVER OVERLAY ═══════════════════════ */
+.item-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(10, 10, 10, 0.65);
+  backdrop-filter: blur(2px);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 24px;
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+  z-index: 2;
+}
+
+.item-wrapper:hover .item-overlay {
+  opacity: 1;
+}
+
+/* Overlay Top (Index & Category) */
+.item-overlay-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.8;
+}
+
+.item-overlay-top .item-index {
+  opacity: 0.5;
+}
+
+/* Overlay Center (View Button Pill) */
+.item-overlay-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.item-overlay-center span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--white);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  padding: 10px 22px;
+  border-radius: 100px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(4px);
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.item-wrapper:hover .item-overlay-center span {
+  background: var(--white);
+  color: var(--black);
+  border-color: var(--white);
+}
+
+/* Overlay Bottom (Title & Subtitle/Year) */
+.item-overlay-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.item-overlay-bottom .item-title {
+  font-family: var(--font-sans);
+  font-size: clamp(16px, 1.8vw, 24px);
+  font-weight: 600;
+  line-height: 1.1;
+  text-transform: uppercase;
+  letter-spacing: -0.02em;
+  color: var(--white);
+}
+
+.item-overlay-bottom .item-meta {
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--white);
+  opacity: 0.5;
+}
+
+/* ═══════════════════════ COLOR SHIFT ON HOVER ═══════════════════════ */
+.color-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 0, 150, 0.35), rgba(0, 150, 255, 0.35));
+  opacity: 0;
+  pointer-events: none;
+  border-radius: 8px;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}

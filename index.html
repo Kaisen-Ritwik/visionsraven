@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VisionsRaven™ — Graphic Design Portfolio</title>
+  <meta name="description" content="VisionsRaven™ — A graphic designer crafting bold, expressive visuals. Album art, editorial design, and digital illustration." />
+  <meta property="og:title" content="VisionsRaven™ — Graphic Design Portfolio" />
+  <meta property="og:description" content="Bold, expressive graphic design. Album art, editorial, and digital illustration." />
+  <meta property="og:image" content="./logo/visionsravenlogo.png" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Performance: Resource preconnects & DNS prefetching -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
+  <link rel="preconnect" href="https://unpkg.com" />
+  <link rel="dns-prefetch" href="https://unpkg.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,300;1,400;1,500&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="masonry.css" />
+</head>
+<body>
+
+  <!-- Preloader Screen -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-logo-wrap">
+      <img src="./logo/visionsravenlogowhite.png" alt="VisionsRaven" class="preloader-logo" decoding="async" fetchpriority="high" />
+    </div>
+  </div>
+
+  <!-- Header Logo -->
+  <header class="site-header">
+    <a href="#hero" class="logo-link">
+      <img src="./logo/visionsravenlogowhite.png" alt="VisionsRaven Logo" decoding="async" fetchpriority="high" />
+    </a>
+  </header>
+
+  <!-- ═══════════════════════════════ FLOATING PILL NAV ═══════════════════════════════ -->
+  <nav class="pill-nav" id="pill-nav">
+    <button class="pill-btn" id="menu-toggle" aria-label="Open Menu">
+      <span class="pill-dot"></span>
+      <span>MENU</span>
+    </button>
+    <span class="pill-divider">|</span>
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hallucinationsbyraven@gmail.com" target="_blank" rel="noopener noreferrer" class="pill-cta">Start a Project</a>
+  </nav>
+
+  <!-- Staggered Menu Panel Wrapper -->
+  <div class="staggered-menu-wrapper fixed-wrapper" id="staggered-menu-wrapper" data-position="right" style="display: none;">
+    <div class="sm-backdrop" id="sm-backdrop"></div>
+    <div class="sm-prelayers" id="sm-prelayers">
+      <div class="sm-prelayer" style="background: #111111;"></div>
+      <div class="sm-prelayer" style="background: #222222;"></div>
+    </div>
+    
+    <aside id="staggered-menu-panel" class="staggered-menu-panel">
+      <div class="sm-panel-inner">
+        <div class="sm-panel-header">
+          <span class="sm-panel-brand">VISIONS<em>RAVEN</em>™</span>
+          <button class="sm-panel-close" id="menu-close" aria-label="Close Menu">✕</button>
+        </div>
+        
+        <ul class="sm-panel-list" role="list" data-numbering="true">
+          <li class="sm-panel-itemWrap">
+            <a class="sm-panel-item" href="#about" aria-label="Go to about section">
+              <span class="sm-panel-itemLabel">About</span>
+            </a>
+          </li>
+          <li class="sm-panel-itemWrap">
+            <a class="sm-panel-item" href="#work" aria-label="Go to work section">
+              <span class="sm-panel-itemLabel">Work</span>
+            </a>
+          </li>
+          <li class="sm-panel-itemWrap">
+            <a class="sm-panel-item" href="#services" aria-label="Go to services section">
+              <span class="sm-panel-itemLabel">Services</span>
+            </a>
+          </li>
+          <li class="sm-panel-itemWrap">
+            <a class="sm-panel-item" href="#contact" aria-label="Go to contact section">
+              <span class="sm-panel-itemLabel">Contact</span>
+            </a>
+          </li>
+        </ul>
+        
+        <div class="sm-socials" aria-label="Social links">
+          <h3 class="sm-socials-title">Socials</h3>
+          <ul class="sm-socials-list" role="list">
+            <li class="sm-socials-item">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hallucinationsbyraven@gmail.com" target="_blank" rel="noopener noreferrer" class="sm-socials-link">hallucinationsbyraven@gmail.com</a>
+            </li>
+            <li class="sm-socials-item">
+              <a href="https://www.instagram.com/visions_raven/?hl=en" target="_blank" rel="noopener noreferrer" class="sm-socials-link">Instagram ↗</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 1 — HERO (DARK)
+       Layout: corner meta + centered giant headline + centered sub
+  ═══════════════════════════════════════════ -->
+  <section class="section dark hero-section" id="hero">
+    <div class="corner top-right"><a href="https://www.instagram.com/visions_raven/?hl=en" target="_blank" class="corner-link">@visions_raven ↗</a></div>
+    <div class="corner bottom-left"><span>© 2025 VisionsRaven™</span></div>
+    <div class="corner bottom-right"><a href="#work" class="corner-link">Scroll ↓</a></div>
+
+    <div class="hero-center">
+      <p class="overline">Portfolio — 2024/2025</p>
+      <h1 class="display-heading">VISIONS<br><em>crafted</em><br>IN DARK</h1>
+      <p class="hero-sub">Bold, expressive design that lives between<br>music, culture, and visual storytelling.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 2 — ABOUT (LIGHT)
+       Layout: centered label → centered headline → centered constrained body
+  ═══════════════════════════════════════════ -->
+  <section class="section light about-section" id="about">
+    <div class="corner top-right"><span>Est. 2022</span></div>
+
+    <div class="about-center">
+      <p class="overline">About</p>
+      <h2 class="display-heading">
+        Design that<br>moves people
+      </h2>
+      <p class="about-body">
+        I'm VisionsRaven — a graphic designer obsessed with the intersection of music, emotion, and raw visual power. My work spans album artwork, editorial design, digital illustration, and brand identity. Every piece is built to provoke a feeling. Whether it's silence or a scream.
+      </p>
+      <div class="about-stats">
+        <div class="about-icons">
+          <img src="./icons/5968474.png" alt="Photoshop" class="about-icon" decoding="async" loading="lazy" />
+          <img src="./icons/5968522.png" alt="Illustrator" class="about-icon" decoding="async" loading="lazy" />
+          <img src="./icons/5968572.png" alt="Figma" class="about-icon" decoding="async" loading="lazy" />
+          <img src="./icons/5968575.png" alt="After Effects" class="about-icon" decoding="async" loading="lazy" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 3 — WORK (DARK)
+       Layout: editorial 3-col rows — index left | card center | meta right
+  ═══════════════════════════════════════════ -->
+  <section class="section dark work-section" id="work">
+    <div class="corner top-right"><span>2024 — 2025</span></div>
+
+    <div class="work-intro">
+      <p class="overline">The Work</p>
+      <h2 class="display-heading">Selected<br>Projects</h2>
+    </div>
+
+    <div class="masonry-container list" id="masonry-grid">
+      <!-- Semantic items that contain project images and metadata -->
+      <div class="work-item" data-id="1" data-title="Winged Demons" data-type="Album Art" data-year="2025" data-quarter="Q1" data-service="Cover Design<br>Art Direction" data-url="">
+        <img src="./works/I'm so fucking back.webp" alt="Winged Demons" />
+      </div>
+      <div class="work-item" data-id="2" data-title="Dead Republic" data-type="Cover Design" data-year="2024" data-quarter="Q4" data-service="Album Art<br>Typography" data-url="">
+        <img src="./works/deadrepublic.webp" alt="Dead Republic" />
+      </div>
+      <div class="work-item" data-id="3" data-title="The Butterfly Effect" data-type="Digital Art" data-year="2024" data-quarter="Q3" data-service="Illustration<br>Concept Art" data-url="">
+        <img src="./works/TheButterflyEffect.webp" alt="The Butterfly Effect" />
+      </div>
+      <div class="work-item" data-id="4" data-title="Utopia" data-type="Album Art Tribute" data-year="2024" data-quarter="Q2" data-service="Album Art<br>Fan Edit" data-url="">
+        <img src="./works/travis scott utopia.webp" alt="Utopia" />
+      </div>
+      <div class="work-item" data-id="5" data-title="Disturbia" data-type="Editorial Design" data-year="2024" data-quarter="Q1" data-service="Editorial<br>Layout" data-url="">
+        <img src="./works/disturbia.webp" alt="Disturbia" />
+      </div>
+      <div class="work-item" data-id="6" data-title="Memento Mori" data-type="Concept Art" data-year="2023" data-quarter="Q4" data-service="Concept<br>Digital Art" data-url="">
+        <img src="./works/momentomori.webp" alt="Memento Mori" />
+      </div>
+      <div class="work-item" data-id="7" data-title="Don't Tap the Glass" data-type="Digital Illustration" data-year="2023" data-quarter="Q3" data-service="Illustration<br>Art Direction" data-url="">
+        <img src="./works/don_t tap the glass.webp" alt="Don't Tap the Glass" />
+      </div>
+      <div class="work-item" data-id="8" data-title="Pleasure" data-type="Visual Art" data-year="2023" data-quarter="Q2" data-service="Photography<br>Edit" data-url="">
+        <img src="./works/pleasure.webp" alt="Pleasure" />
+      </div>
+      <div class="work-item" data-id="9" data-title="Socrates" data-type="Conceptual Art" data-year="2023" data-quarter="Q1" data-service="Concept<br>Illustration" data-url="">
+        <img src="./works/socrates.webp" alt="Socrates" />
+      </div>
+      <div class="work-item" data-id="10" data-title="Erotica" data-type="Art Direction" data-year="2022" data-quarter="Q4" data-service="Art Direction<br>Photo Edit" data-url="">
+        <img src="./works/erotica statue.webp" alt="Erotica" />
+      </div>
+      <div class="work-item" data-id="11" data-title="Rose" data-type="Floral Series" data-year="2022" data-quarter="Q3" data-service="Illustration<br>Series" data-url="">
+        <img src="./works/rose.webp" alt="Rose" />
+      </div>
+      <div class="work-item" data-id="12" data-title="Crushed" data-type="Experimental" data-year="2022" data-quarter="Q2" data-service="Experimental<br>Visual" data-url="">
+        <img src="./works/crushed.webp" alt="Crushed" />
+      </div>
+      <div class="work-item" data-id="13" data-title="Lost" data-type="Digital Art" data-year="2022" data-quarter="Q1" data-service="Illustration<br>Digital Art" data-url="">
+        <img src="./works/lost.webp" alt="Lost" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 4 — MARQUEE (LIGHT)
+  ═══════════════════════════════════════════ -->
+  <section class="marquee-section light">
+    <div class="marquee-track">
+      <div class="marquee-inner">
+        <span>Album Art</span><span class="mx">×</span>
+        <span>Editorial Design</span><span class="mx">×</span>
+        <span>Digital Illustration</span><span class="mx">×</span>
+        <span>Concept Art</span><span class="mx">×</span>
+        <span>Art Direction</span><span class="mx">×</span>
+        <span>Brand Identity</span><span class="mx">×</span>
+        <span>Visual Storytelling</span><span class="mx">×</span>
+        <span>Album Art</span><span class="mx">×</span>
+        <span>Editorial Design</span><span class="mx">×</span>
+        <span>Digital Illustration</span><span class="mx">×</span>
+        <span>Concept Art</span><span class="mx">×</span>
+        <span>Art Direction</span><span class="mx">×</span>
+        <span>Brand Identity</span><span class="mx">×</span>
+        <span>Visual Storytelling</span><span class="mx">×</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 5 — SERVICES (DARK)
+       Layout: centered heading + 3-col service grid with dividers
+  ═══════════════════════════════════════════ -->
+  <section class="section dark services-section" id="services">
+
+    <div class="services-intro">
+      <p class="overline">Services</p>
+      <h2 class="display-heading">Design for<br>every vision</h2>
+    </div>
+
+    <div class="services-grid">
+      <div class="service-col">
+        <div class="service-num">01</div>
+        <h3 class="service-name">Album Art &amp;<br>Cover Design</h3>
+        <p class="service-desc">Custom cover artwork for singles, EPs, and albums. Designed to stop the scroll and define a sound visually.</p>
+        <span class="service-tag">Music × Visual Identity</span>
+      </div>
+      <div class="service-col">
+        <div class="service-num">02</div>
+        <h3 class="service-name">Digital<br>Illustration</h3>
+        <p class="service-desc">Hand-crafted digital illustrations — from conceptual and surreal to bold and graphic. Built for posters, merch, or standalone art.</p>
+        <span class="service-tag">Illustration × Art</span>
+      </div>
+      <div class="service-col">
+        <div class="service-num">03</div>
+        <h3 class="service-name">Editorial &amp;<br>Poster Design</h3>
+        <p class="service-desc">Layouts, typography, and visual compositions for print and digital editorial contexts. Bold, intentional, and impactful.</p>
+        <span class="service-tag">Typography × Layout</span>
+      </div>
+      <div class="service-col">
+        <div class="service-num">04</div>
+        <h3 class="service-name">Brand<br>Identity</h3>
+        <p class="service-desc">Logo design, visual systems, and brand guidelines for artists, creatives, and small brands who want a distinct identity.</p>
+        <span class="service-tag">Branding × Identity</span>
+      </div>
+      <div class="service-col">
+        <div class="service-num">05</div>
+        <h3 class="service-name">Art<br>Direction</h3>
+        <p class="service-desc">Conceptual guidance and creative direction for visual projects — from mood boards and color stories to full campaign direction.</p>
+        <span class="service-tag">Direction × Concept</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════
+       SECTION 6 — CONTACT (DARK)
+       Layout: centered giant headline + centered sub + centered buttons
+  ═══════════════════════════════════════════ -->
+  <section class="section dark contact-section" id="contact">
+    <div class="corner top-right"><a href="https://www.instagram.com/visions_raven/?hl=en" target="_blank" class="corner-link">@visions_raven ↗</a></div>
+    <div class="corner bottom-left"><span>© 2025 VisionsRaven™. All rights reserved.</span></div>
+    <div class="corner bottom-right"><span>Based in India</span></div>
+
+    <div class="contact-center">
+      <p class="overline">Contact</p>
+      <h2 class="contact-heading">SAY<br><em>HELLO</em></h2>
+      <p class="contact-sub">Got a vision? Let's build it together.</p>
+      <div class="contact-btns">
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=hallucinationsbyraven@gmail.com" target="_blank" rel="noopener noreferrer" class="btn-primary">Send an Email</a>
+        <a href="https://www.instagram.com/visions_raven/?hl=en" target="_blank" class="btn-ghost">Instagram ↗</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <button class="lightbox-close" id="lightbox-close">✕</button>
+    <button class="lightbox-prev" id="lb-prev">←</button>
+    <div class="lightbox-inner">
+      <img src="" alt="" id="lightbox-img" />
+      <div class="lightbox-caption">
+        <h3 id="lb-title"></h3>
+        <span id="lb-type"></span>
+      </div>
+    </div>
+    <button class="lightbox-next" id="lb-next">→</button>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="masonry.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
